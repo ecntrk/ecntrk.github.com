@@ -2,10 +2,11 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>ecntrk.github.com by ecntrk</title>
+    <meta http-equiv="X-UA-Compatible" content="text/html">
+    <title>Debmalya Sinha</title>
 
     <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/deb-styles.css">
     <link rel="stylesheet" href="stylesheets/pygment_trac.css">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <!--[if lt IE 9]>
@@ -19,7 +20,7 @@
         <p class="view"><a href="https://ecntrk.github.in/">Homepage</a><br>
         <a href="https://github.com/ecntrk">GitHub Profile</a><br>
         <a href="https://www.linkedin.com/in/ecntrk/">LinkedIn Profile</a><br>
-        <a href="data/Debmalya_Sinha_cv.pdf">Updated Résumé</a>
+        <a href="data/Debmalya_Sinha_resume.pdf">Updated Résumé</a>
                 </p>
       <br>
       <B>Interests:</b><br>
@@ -33,20 +34,35 @@ Human Computer Interaction<br>
       </header>
       <section>
         <h3>Timeline</h3>
-
-<p><b>PhD Candidate</b> (Expected: Dec 2017)<br>
+<div class="timeline-elem" onclick="toggleDesc('phd')">
+<p><b class="timeline-elem-job">PhD Candidate</b> (Expected: Dec 2017)<br>
 Warwick Manufacturing Group, University of Warwick, U.K. <br>
 <i>High fidelity rendering with real-world light.</i>
 </p>
-<p><b>Research Scientist</b> (2013-2014)<br>
+</div>
+<div class="hidden-desc" id="phd">This body of work is developing a Light Field based rendering technique from real-world scenes. Details can't be made public for descretion.<br>
+Supervisors: Dr. Kurt Debattista and Prof Alan Chalmers
+</div>
+
+
+<div class="timeline-elem" onclick="toggleDesc('job1')">
+<p><b class="timeline-elem-job">Research Scientist</b> (2013-2014)<br>
 Felicitous Computing Group, National University of Singapore, Singapore.<br>
 <i>Development of an emotion recognition system from gestures.</i>
 </p>
+</div>
+<div class="hidden-desc" id="job1">Development of an Artificial Neural Network based Emotion Recognition software from body movement via a Kinect sensor. The emotion is detected in two dimensions of Valence and Arousal and thus can be represented continuously in a 2D emotion space, rather than only recognising a constrained set of discreet emotions.<br>
+Supervisor: Prof. David Rosenblum<br>
+</div>
 
-<p><b>Master of Science</b> (2013)<br>Dept. of Computer Science, Indian Institute of Technology, Kharagpur<br>
+
+<div class="timeline-elem" onclick="toggleDesc('ms')">
+<p><b class="timeline-elem-job">Master of Science</b> (2013)<br>Dept. of Computer Science, Indian Institute of Technology, Kharagpur<br>
 <i>Design and evaluation of a computer interface for users in rural India.</i>
 </p>
-
+</div>
+<div class="hidden-desc" id="ms">Design and development of a Linux Desktop user interface for socio-economically backward people from rural India with no prior technical exposure. <br>
+Supervisor: Prof. Anupam Basu</div>
       </section>
       
 
@@ -56,6 +72,7 @@ Felicitous Computing Group, National University of Singapore, Singapore.<br>
     </div>
 
     <script src="javascripts/scale.fix.js"></script>
+    <script src="javascripts/hiddendivs.js"></script>
     
   </body>
 </html>
