@@ -25,8 +25,11 @@ txtl = txtl+ 'px';
 
 function toggleCur(id, choice) {
         var el;
-        el = document.getElementById(id);
-        if(choice==='1')
+        el = document.getElementById(id+'_R');
+        el2 = document.getElementById(id);
+        if(el2.style.visibility==='hidden'|| el2.style.visibility==='')
+        {
+        if(choice==='1' )
         {          
           el.style.opacity = "1.0";
           el.style.visibility='visible';
@@ -41,4 +44,6 @@ function toggleCur(id, choice) {
           el.innerHTML = "★"
 
         }
+      }
+
 }
