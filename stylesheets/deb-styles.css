@@ -1,7 +1,11 @@
 
 b.timeline-elem-job{
     color:#800;
-    text-decoration: none;
+    text-decoration: none;    
+}
+div.timeline-elem{
+  height: 60px;
+  margin: 0px;
 }
 div.timeline-elem:hover{
     color:#000;
@@ -21,10 +25,8 @@ div.hidden-desc
   height : 1px;
 }
 
-span.hidden-text
+div.hidden-text
 {
-
-float: center;
   color: #AAA;
   text-align: middle;
   visibility: hidden;
