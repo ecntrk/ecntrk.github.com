@@ -5,7 +5,6 @@ b.timeline-elem-job{
 }
 div.timeline-elem{
   height: 60px;
-  margin: 0px;
 }
 div.timeline-elem:hover{
     color:#000;
