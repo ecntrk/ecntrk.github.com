@@ -6,6 +6,8 @@ function toggleDesc(id) {
         var txt = el.innerHTML.split('<',1);
 
 var txtl = Math.round((txt[0].length/80)*25 +40);
+if (id == 'job4')
+txtl = txtl+300;
 txtl = txtl+ 'px';
         if(el.style.visibility==='hidden' || el.style.visibility==='')
         {          
