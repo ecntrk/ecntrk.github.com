@@ -8,10 +8,17 @@ div.timeline-elem{
 }
 div.timeline-elem:hover{
     color:#000;
+  background: #EEE;
+  background: -webkit-linear-gradient(#EEE, #FFF);
+  background:    -moz-linear-gradient(#EEE, #FFF);
+  background:         linear-gradient(#EEE, #FFF);
+
   -webkit-stroke-width: 1.3px;
       -webkit-stroke-color: #FFFFFF;
       -webkit-fill-color: #FFFFFF;
       text-shadow: 1px 0px 50px #FFF;
+
+
 
           cursor: pointer;
     display: block;
@@ -22,6 +29,13 @@ div.hidden-desc
   opacity = 0.0;
   transition: visibility 0.7s, opacity 0.7s, height 0.2s linear;
   height : 1px;
+    background: #EEE;
+  background: -webkit-linear-gradient(to right, #F8F8F8, #FFF);
+  background:    -moz-linear-gradient(to right, #F8F8F8, #FFF);
+  background:         linear-gradient(to right, #F8F8F8, #FFF);
+padding-left: 10px;
+padding-top: 4px;
+border-radius: 20px;
 }
 
 div.hidden-text
@@ -37,4 +51,8 @@ div.hidden-text
 p.timeline-elem-desc
 {
 
+}
+div {
+  text-align: justify;
+  text-justify: inter-word;
 }
