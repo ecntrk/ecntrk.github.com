@@ -18,14 +18,14 @@ function toggleDesc(id) {
     el.style.opacity = "1.0";
     el.style.visibility='visible';
     el.style.height = txtl;
-    el2.innerHTML =  extraspace+"less ▲"
+    el2.innerHTML =  extraspace+"less ▲"+txLen+"," +el.clientWidth
   }
   else
   {
     el.style.opacity = "0.0";
     el.style.visibility='hidden';
     el.style.height = '1px';
-    el2.innerHTML = extraspace+"more ▼"
+    el2.innerHTML = extraspace+"more ▼"+txLen+"," +el.clientWidth
   }
 }
 
