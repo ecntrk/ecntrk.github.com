@@ -52,10 +52,13 @@ function toggleCur(id, choice) {
   el = document.getElementById(id+'_R');
   el2 = document.getElementById(id);
   txLen =document.getElementById(id+'_S').innerHTML.length;
+  var isMobile = mobileCheck();
+  var multFactor = 5.75
+  if(isMobile) multFactor = 4;
 
   var extraspace = "";
   var el2Height = "20px";
-  if(el.clientWidth < txLen *5.75) //magic number!
+  if(el.clientWidth < txLen *multFactor) //magic number!
   {
     extraspace="<br>";
     el2Height = "40px";
