@@ -17,7 +17,7 @@ function toggleDesc(id) {
   var el2Height = "20px";
   if(el.clientWidth < txLen *multFactor) //magic number!
   {
-    extraspace="<br>mobile";
+    extraspace="<br>";
     el2Height = "40px";
 
   }
@@ -71,7 +71,7 @@ function toggleCur(id, choice) {
     el.style.opacity = "1.0";
     el.style.visibility='visible';
     el.style.height = el2Height;
-    el.innerHTML = extraspace+"more ▼"+txLen+"," +el.clientWidth ;
+    el.innerHTML = extraspace+"more ▼";
     
   }
   else
