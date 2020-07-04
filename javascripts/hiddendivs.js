@@ -8,22 +8,26 @@ function toggleDesc(id) {
   el = document.getElementById(id);
   el2 = document.getElementById(id+'_R');
 //  txLen = Math.max(document.getElementById(id+'_S').innerHTML.length, document.getElementById(id+'_TE').innerHTML.length);
-  txLen =document.getElementById(id+'_S').innerHTML.length;
+  var el_s = document.getElementById(id+'_S');
+  txLen =el_s.innerHTML.length;
   var extraspace = "";
   var isMobile = mobileCheck();
   var multFactor = 5.75
-  if(isMobile) multFactor = 4;
-
-  var el2Height = "20px";
+  if(isMobile) multFactor = 7;
+  var el2Height = "20px";  
   if(el.clientWidth < txLen *multFactor) //magic number!
   {
-    extraspace="<br>";
+    //extraspace="<br>";//if(isMobile)extraspace+="<br>";
     el2Height = "40px";
-
+    //el_s.style.height = "60px";
   }
 
+
+
   var txt = el.innerHTML.split('<',1);
-  var txtl = Math.round((txt[0].length/80)*25 +40);
+  var txtl = Math.round((txt[0].length/80)*25 +20);
+  if(isMobile) txtl = Math.round((txt[0].length/60)*25 +40);
+
   if (id == 'job4' || id == 'job5')
   txtl = txtl+300;
   txtl = txtl+ 'px';
@@ -31,7 +35,7 @@ function toggleDesc(id) {
   if(el.style.visibility==='hidden' || el.style.visibility==='')
   { 
     el2.style.height = el2Height;         
-    el2.innerHTML =  extraspace+"less ▲";
+    if(!isMobile) el2.innerHTML =  extraspace+"less ▲";
     el.style.opacity = "1.0";
     el.style.visibility='visible';
     el.style.height = txtl;
@@ -42,25 +46,26 @@ function toggleDesc(id) {
     el.style.opacity = "0.0";
     el.style.visibility='hidden';
     el.style.height = '1px';
-    el2.innerHTML = extraspace+"more ▼";
+    if(!isMobile) el2.innerHTML = extraspace+"more ▼";
   }
 }
 
 //Mouseover
 function toggleCur(id, choice) {
+  if(mobileCheck()) return;
   var el;
   el = document.getElementById(id+'_R');
   el2 = document.getElementById(id);
   txLen =document.getElementById(id+'_S').innerHTML.length;
   var isMobile = mobileCheck();
-  var multFactor = 5.75
-  if(isMobile) multFactor = 4;
+  var multFactor = 4.5
+  if(isMobile) multFactor = 7;
 
   var extraspace = "";
   var el2Height = "20px";
   if(el.clientWidth < txLen *multFactor) //magic number!
   {
-    extraspace="<br>";
+    //extraspace="<br>";
     el2Height = "40px";
   }
 
